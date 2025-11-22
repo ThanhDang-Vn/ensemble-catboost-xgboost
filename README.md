@@ -31,16 +31,6 @@ This project implements both algorithms on multiple datasets with hyperparameter
 **Regression**: RMSE, MAE
 **Efficiency**: Training time, Inference time
 
-## 🚀 Quick Start
-
-```bash
-# Install dependencies
-pip install -r requirements.txt
-
-# Run experiments
-python src/main.py --model xgboost
-python src/main.py --model catboost
-```
 
 ## 📁 Project Structure
 
