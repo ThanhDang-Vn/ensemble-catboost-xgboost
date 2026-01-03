@@ -1,0 +1,11 @@
+filename,caption
+xgb_reg_alpha_auc.png,XGBoost AUC vs reg_alpha (mean ± std across seeds). Dataset: mantis_hunting.csv. Primary metric: AUC.
+xgb_reg_alpha_sparsity.png,XGBoost feature sparsity vs reg_alpha (mean ± std across seeds).
+cat_l2_leaf_reg_train_val_auc.png,CatBoost train vs validation AUC across l2_leaf_reg (mean ± std).
+cat_l2_leaf_reg_auc_std.png,CatBoost validation AUC standard deviation vs l2_leaf_reg.
+xgb_sampling_heatmap_mean_auc.png,Heatmap of mean validation AUC across subsample × colsample_bytree (XGBoost).
+xgb_sampling_boxplots.png,Boxplots of validation AUC for selected sampling configurations (XGBoost).
+cat_bagging_temperature_auc.png,CatBoost: Validation AUC vs bagging_temperature (mean ± std).
+cat_bagging_temperature_auc_std.png,CatBoost: Validation AUC standard deviation vs bagging_temperature.
+cat_tree_depth_vs_nodes.png,CatBoost: average tree depth vs nodes per tree across seeds.
+cat_tree_auc_boxplot.png,CatBoost: validation AUC distribution (per seed) for symmetric trees.

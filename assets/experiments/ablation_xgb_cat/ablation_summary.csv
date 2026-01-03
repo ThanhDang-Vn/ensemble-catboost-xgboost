@@ -1,0 +1,5 @@
+hyperparameter,observed_effect,interpretation
+XGB reg_alpha,val AUC change ≈ -0.0006 across tested range,Increasing L1 (reg_alpha) promotes sparsity; high values may reduce AUC due to underfitting.
+CatBoost l2_leaf_reg,generalization gap mean range 0.0305 to 0.0507,Increasing l2_leaf_reg controls overfitting and reduces train-val gap; may slightly lower train AUC while stabilizing validation performance.
+XGB subsample × colsample_bytree,"best cell (1.0, '0.8') with mean val AUC 0.8303",Sampling trades off variance for bias; mid-range sampling often reduces overfitting while preserving AUC.
+CatBoost bagging_temperature,best value 0.0 (AUC 0.8532),Moderate bagging_temperature often improves robustness; extremes can increase variance.
