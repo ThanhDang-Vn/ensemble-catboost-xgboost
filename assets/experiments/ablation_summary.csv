@@ -1,0 +1,35 @@
+model,hyperparam,value,rmse,train_time_s,note
+XGBoost,reg_alpha,0.0,0.4573 ± 0.0,0.14,L1 regularization; higher values slightly increase val RMSE here
+XGBoost,reg_alpha,0.01,0.4588 ± 0.0,0.18,L1 regularization; higher values slightly increase val RMSE here
+XGBoost,reg_alpha,0.1,0.4575 ± 0.0,0.19,L1 regularization; higher values slightly increase val RMSE here
+XGBoost,reg_alpha,0.5,0.4606 ± 0.0,0.19,L1 regularization; higher values slightly increase val RMSE here
+XGBoost,reg_alpha,1.0,0.4624 ± 0.0,0.16,L1 regularization; higher values slightly increase val RMSE here
+XGBoost,reg_lambda,0.1,0.4605 ± 0.0,0.14,L2 regularization; effect minor within tested range
+XGBoost,reg_lambda,1.0,0.4573 ± 0.0,0.19,L2 regularization; effect minor within tested range
+XGBoost,reg_lambda,5.0,0.4614 ± 0.0,0.14,L2 regularization; effect minor within tested range
+XGBoost,reg_lambda,10.0,0.4593 ± 0.0,0.13,L2 regularization; effect minor within tested range
+CatBoost,l2_leaf_reg,1.0,0.4672 ± 0.0013,0.26,L2 regularization; larger values reduced overfitting but slightly worsened val RMSE
+CatBoost,l2_leaf_reg,3.0,0.4657 ± 0.0011,0.29,L2 regularization; larger values reduced overfitting but slightly worsened val RMSE
+CatBoost,l2_leaf_reg,5.0,0.4662 ± 0.001,0.26,L2 regularization; larger values reduced overfitting but slightly worsened val RMSE
+CatBoost,l2_leaf_reg,10.0,0.4692 ± 0.0024,0.27,L2 regularization; larger values reduced overfitting but slightly worsened val RMSE
+CatBoost,l2_leaf_reg,20.0,0.4768 ± 0.0024,0.31,L2 regularization; larger values reduced overfitting but slightly worsened val RMSE
+XGBoost,subsample_colsample,"(0.6, 0.6)",0.4612 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(0.6, 0.8)",0.4593 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(0.6, 1.0)",0.4598 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(0.8, 0.6)",0.456 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(0.8, 0.8)",0.4604 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(0.8, 1.0)",0.4575 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(1.0, 0.6)",0.4561 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(1.0, 0.8)",0.4631 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+XGBoost,subsample_colsample,"(1.0, 1.0)",0.4573 ± nan,,Moderate subsample/colsample reduces variance; small RMSE differences observed
+CatBoost,bagging_temperature,0.0,0.4657 ± 0.0011,0.34,Bagging temperature had negligible impact on val RMSE in this dataset
+CatBoost,bagging_temperature,0.5,0.4657 ± 0.0011,0.29,Bagging temperature had negligible impact on val RMSE in this dataset
+CatBoost,bagging_temperature,1.0,0.4657 ± 0.0011,0.26,Bagging temperature had negligible impact on val RMSE in this dataset
+CatBoost,bagging_temperature,2.0,0.4657 ± 0.0011,0.27,Bagging temperature had negligible impact on val RMSE in this dataset
+CatBoost,bagging_temperature,5.0,0.4657 ± 0.0011,0.28,Bagging temperature had negligible impact on val RMSE in this dataset
+XGBoost,grow_policy,depthwise,0.4573 ± 0.0,0.13,Loss-guide faster for this setting but RMSE similar
+XGBoost,grow_policy,lossguide,0.4573 ± 0.0,0.17,Loss-guide faster for this setting but RMSE similar
+CatBoost,depth,3,0.4772 ± 0.0013,0.15,Shallower symmetric trees reduced training time with minor RMSE changes
+CatBoost,depth,5,0.4657 ± 0.0011,0.27,Shallower symmetric trees reduced training time with minor RMSE changes
+CatBoost,depth,7,0.4633 ± 0.0039,0.48,Shallower symmetric trees reduced training time with minor RMSE changes
+CatBoost,depth,9,0.4672 ± 0.0031,1.47,Shallower symmetric trees reduced training time with minor RMSE changes
