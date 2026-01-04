@@ -2,4 +2,5 @@ data/
 classification/catboost_info
 assets/realtor-data.zip.csv
 assets/churn.csv
+assets/train.csv
 assets
